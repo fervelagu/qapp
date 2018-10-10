@@ -1,0 +1,18 @@
+<div>
+  <form [formGroup]="form" (submit)="onSubmit()">
+
+      <div [formArrayName]="questions">
+        <!-- <div *ngFor="let q of questions; let i = index;">
+          <div [formGroupName]="i"> -->
+              {{q.value}}
+            <!-- <button type="button" (click)="onRemove(q, i)">
+              Remove
+            </button> -->
+          <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    
+    <pre>{{form.value | json}}</pre>
+    
+  </form>
+</div>
